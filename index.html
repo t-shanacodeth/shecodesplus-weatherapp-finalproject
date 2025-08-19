@@ -24,148 +24,153 @@
   </head>
   <body>
     <div id="weather-app" class="weather-app">
-      <header class="heading">
-        <!-- Search Bar -->
-        <form id="search-bar">
-          <input
-            type="search"
-            id="search-input"
-            class="search-input-form"
-            placeholder="Enter a city here..."
-            required
-          />
-          <input
-            type="submit"
-            value="Search"
-            autocomplete="off"
-            autofocus="on"
-            id="submit-btn"
-            class="submit-btn"
-          />
-        </form>
-      </header>
+      <div class="container-1">
+        <header class="heading">
+          <!-- Search Bar -->
+          <form id="search-bar">
+            <input
+              type="search"
+              id="search-input"
+              class="search-input-form"
+              placeholder="Enter a city here..."
+              required
+            />
+            <input
+              type="submit"
+              value="Search"
+              autocomplete="off"
+              autofocus="on"
+              id="submit-btn"
+              class="submit-btn"
+            />
+          </form>
+        </header>
 
-      <!-- Weather Section -->
-      <main class="weather-section">
-        <section class="location-date">
-          <!-- Location -->
-          <h1 class="location">
-            <i class="material-icons location-pin">place</i>
-            London
-          </h1>
+        <!-- Weather Section -->
+        <main class="weather-section">
+          <section class="location-date">
+            <!-- Location -->
+            <h1 class="location">
+              <i class="material-icons location-pin">place</i>
+              London
+            </h1>
 
-          <!-- Day, Date, Time -->
-          <h2>
-            <span id="date">Sunday, 10 August</span>
-            |
-            <span id="time">15:00</span>
-          </h2>
-        </section>
+            <!-- Day, Date, Time -->
+            <h2>
+              <span id="date">Sunday, 10 August</span>
+              |
+              <span id="time">15:00</span>
+            </h2>
+          </section>
 
-        <!-- Current Weather -->
-        <section class="current-weather">
-          <!-- Temperature -->
-          <div class="current-temperature" id="current-temperature">
-            <p id="temperature">24º</p>
-            <span class="temperature-unit-toggle">C | F</span>
-          </div>
+          <!-- Current Weather -->
+          <section class="current-weather">
+            <!-- Temperature -->
+            <div class="current-temperature" id="current-temperature">
+              <p id="temperature" class="temperature">24</p>
+              <span class="temperature-unit">ºC</span>
+            </div>
 
-          <!-- Cloudy and icon -->
-          <div>
-            <p>Cloudy ☁️</p>
-          </div>
-        </section>
+            <!-- Cloudy and icon -->
+            <div class="cloud-coverage">
+              <p id="cloud-coverage-description">Partly Cloudy</p>
+              <span class="cloud-coverage-icon"> ⛅️ </span>
+            </div>
+          </section>
 
-        <!-- Weather Stats -->
-        <section class="additional-weather-stats">
-          <ul class="weather-stats-list">
-            <li class="weather-stats precipitation">
-              <p>
-                <strong> 30% </strong>
+          <!-- Weather Stats -->
+          <section class="additional-weather-stats">
+            <ul class="weather-stats-list">
+              <li class="weather-stats precipitation">
+                <p>
+                  <strong> 30% </strong>
+                </p>
+                <p>Precipitation</p>
+              </li>
+              <li class="weather-stats humidity">
+                <p>
+                  <strong> 50% </strong>
+                </p>
+                <p>Humidity</p>
+              </li>
+              <li class="weather-stats wind-speed">
+                <p>
+                  <strong> 5mph </strong>
+                </p>
+                <p>Wind Speed</p>
+              </li>
+            </ul>
+          </section>
+        </main>
+      </div>
+      <div class="container-2">
+        <!-- Daily Forecast -->
+        <aside class="daily-forecast">
+          <h4>7-Day Forecast</h4>
+          <ul class="forecast-list">
+            <li class="forecast-today">
+              <h5 class="weekday">Sun</h5>
+              <span class="forecast-weather-icon"> ☁️ </span>
+              <p class="high-temp">
+                <strong> 30º </strong>
               </p>
-              <p>Precipitation</p>
+              <p class="low-temp">12º</p>
             </li>
-            <li class="weather-stats humidity">
-              <p>
-                <strong> 50% </strong>
+            <li>
+              <h5 class="weekday">Mon</h5>
+              <span class="forecast-weather-icon"> ☀️ </span>
+              <p class="high-temp">
+                <strong> 30º </strong>
               </p>
-              <p>Humidity</p>
+              <p class="low-temp">12º</p>
             </li>
-            <li class="weather-stats wind-speed">
-              <p>
-                <strong> 5mph </strong>
+            <li>
+              <h5 class="weekday">Tue</h5>
+              <span class="forecast-weather-icon"> 🌦️ </span>
+              <p class="high-temp">
+                <strong> 24º </strong>
               </p>
-              <p>Precipitation</p>
+              <p class="low-temp">16º</p>
+            </li>
+            <li>
+              <h5 class="weekday">Wed</h5>
+              <span class="forecast-weather-icon"> 🌦️ </span>
+              <p class="high-temp">
+                <strong> 24º </strong>
+              </p>
+              <p class="low-temp">12º</p>
+            </li>
+            <li>
+              <h5 class="weekday">Thu</h5>
+              <span class="forecast-weather-icon"> ☀️ </span>
+              <p class="high-temp">
+                <strong> 15º </strong>
+              </p>
+              <p class="low-temp">12º</p>
+            </li>
+            <li>
+              <h5 class="weekday">Fri</h5>
+              <span class="forecast-weather-icon"> ☀️ </span>
+              <p class="high-temp">
+                <strong> 15º </strong>
+              </p>
+              <p class="low-temp">12º</p>
             </li>
           </ul>
-        </section>
-      </main>
+        </aside>
 
-      <!-- Daily Forecast -->
-      <aside class="daily-forecast">
-        <ul class="forecast-list">
-          <li class="forecast-today">
-            <h4 class="weekday">SUN</h4>
-            <span class="forescast-weather-icon"> ☁️ </span>
-            <p class="high-temp">
-              <strong> 30º </strong>
-            </p>
-            <p class="low-temp">12º</p>
-          </li>
-          <li>
-            <h4 class="weekday">MON</h4>
-            <span class="forescast-weather-icon"> ☀️ </span>
-            <p class="high-temp">
-              <strong> 30º </strong>
-            </p>
-            <p class="low-temp">12º</p>
-          </li>
-          <li>
-            <h4 class="weekday">TUE</h4>
-            <span class="forescast-weather-icon"> 🌦️ </span>
-            <p class="high-temp">
-              <strong> 24º </strong>
-            </p>
-            <p class="low-temp">16º</p>
-          </li>
-          <li>
-            <h4 class="weekday">WED</h4>
-            <span class="forescast-weather-icon"> 🌦️ </span>
-            <p class="high-temp">
-              <strong> 24º </strong>
-            </p>
-            <p class="low-temp">12º</p>
-          </li>
-          <li>
-            <h4 class="weekday">THU</h4>
-            <span class="forescast-weather-icon"> ☀️ </span>
-            <p class="high-temp">
-              <strong> 15º </strong>
-            </p>
-            <p class="low-temp">12º</p>
-          </li>
-          <li>
-            <h4 class="weekday">FRI</h4>
-            <span class="forescast-weather-icon"> ☀️ </span>
-            <p class="high-temp">
-              <strong> 15º </strong>
-            </p>
-            <p class="low-temp">12º</p>
-          </li>
-        </ul>
-      </aside>
-
-      <footer id="credits" class="credits">
-        Coded by
-        <a href="https://github.com/t-shanacodeth"> Tishana Bascombe</a>, is
-        open-sourced on
-        <a
-          href="https://github.com/t-shanacodeth/shecodesplus-weatherapp-finalproject"
-        >
-          GitHub</a
-        >, and hosted on
-        <a href="https://springblossomweather.netlify.app/"> Netlify</a>.
-      </footer>
+        <footer id="credits" class="credits">
+          Coded by
+          <a href="https://github.com/t-shanacodeth"> Tishana Bascombe</a>, is
+          open-sourced on
+          <a
+            href="https://github.com/t-shanacodeth/shecodesplus-weatherapp-finalproject"
+          >
+            GitHub</a
+          >, and hosted on
+          <a href="https://springblossomweather.netlify.app/"> Netlify</a>.
+        </footer>
+      </div>
     </div>
     <script src="scripts/app.js"></script>
   </body>
