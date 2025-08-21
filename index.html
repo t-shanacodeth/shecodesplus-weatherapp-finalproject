@@ -24,86 +24,85 @@
   </head>
   <body>
     <div id="weather-app" class="weather-app">
-      <div class="container-1">
-        <header class="heading">
-          <!-- Search Bar -->
-          <form id="search-bar">
-            <input
-              type="search"
-              id="search-input"
-              class="search-input-form"
-              placeholder="Enter a city here..."
-              required
-            />
-            <input
-              type="submit"
-              value="Search"
-              autocomplete="off"
-              autofocus="on"
-              id="submit-btn"
-              class="submit-btn"
-            />
-          </form>
-        </header>
+      <header class="heading">
+        <!-- Search Bar -->
+        <form id="search-bar">
+          <input
+            type="search"
+            id="search-input"
+            class="search-input-form"
+            placeholder="Enter a city here..."
+            required
+          />
+          <input
+            type="submit"
+            value="Search"
+            autocomplete="off"
+            autofocus="on"
+            id="submit-btn"
+            class="submit-btn"
+          />
+        </form>
+      </header>
 
-        <!-- Weather Section -->
-        <main class="weather-section">
-          <section class="location-date">
-            <!-- Location -->
-            <h1 class="location">
-              <i class="material-icons location-pin">place</i>
-              London
-            </h1>
+      <!-- Weather Section -->
+      <main class="weather-section">
+        <section class="location-date">
+          <!-- Location -->
+          <h1 class="location">
+            <i class="material-icons location-pin">place</i>
+            London
+          </h1>
 
-            <!-- Day, Date, Time -->
-            <h2>
-              <span id="date">Sunday, 10 August</span>
-              |
-              <span id="time">15:00</span>
-            </h2>
-          </section>
+          <!-- Day, Date, Time -->
+          <h2>
+            <span id="date">Sunday, 10 August</span>
+            |
+            <span id="time">15:00</span>
+          </h2>
+        </section>
 
-          <!-- Current Weather -->
-          <section class="current-weather">
-            <!-- Temperature -->
-            <div class="current-temperature" id="current-temperature">
-              <p id="temperature" class="temperature">24</p>
-              <span class="temperature-unit">ºC</span>
-            </div>
+        <!-- Current Weather -->
+        <section class="current-weather">
+          <!-- Temperature -->
+          <div class="current-temperature" id="current-temperature">
+            <p id="temperature" class="temperature">24</p>
+            <span class="temperature-unit">ºC</span>
+          </div>
 
-            <!-- Cloudy and icon -->
-            <div class="cloud-coverage">
-              <p id="cloud-coverage-description">Partly Cloudy</p>
-              <span class="cloud-coverage-icon"> ⛅️ </span>
-            </div>
-          </section>
+          <!-- Cloudy and icon -->
+          <div class="cloud-coverage">
+            <p id="cloud-coverage-description">Partly Cloudy</p>
+            <span class="cloud-coverage-icon"> ⛅️ </span>
+          </div>
+        </section>
 
-          <!-- Weather Stats -->
-          <section class="additional-weather-stats">
-            <ul class="weather-stats-list">
-              <li class="weather-stats precipitation">
-                <p>
-                  <strong> 30% </strong>
-                </p>
-                <p>Precipitation</p>
-              </li>
-              <li class="weather-stats humidity">
-                <p>
-                  <strong> 50% </strong>
-                </p>
-                <p>Humidity</p>
-              </li>
-              <li class="weather-stats wind-speed">
-                <p>
-                  <strong> 5mph </strong>
-                </p>
-                <p>Wind Speed</p>
-              </li>
-            </ul>
-          </section>
-        </main>
-      </div>
-      <div class="container-2">
+        <!-- Weather Stats -->
+        <section class="additional-weather-stats">
+          <ul class="weather-stats-list">
+            <li class="weather-stats precipitation">
+              <p class="weather-stats-figure">
+                <strong> 30% </strong>
+              </p>
+              <p class="weather-stats-description">Precipitation</p>
+            </li>
+            <li class="weather-stats humidity">
+              <p class="weather-stats-figure">
+                <strong> 50% </strong>
+              </p>
+              <p class="weather-stats-description">Humidity</p>
+            </li>
+            <li class="weather-stats wind-speed">
+              <p class="weather-stats-figure">
+                <strong> 5km/h </strong>
+              </p>
+              <p class="weather-stats-description">Wind Speed</p>
+            </li>
+          </ul>
+        </section>
+      </main>
+
+      <div class="forecast-container">
         <!-- Daily Forecast -->
         <aside class="daily-forecast">
           <h4>7-Day Forecast</h4>

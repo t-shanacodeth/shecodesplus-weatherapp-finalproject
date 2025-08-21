@@ -20,13 +20,12 @@ form {
 }
 
 main {
-  background-color: brown;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 1.5rem auto;
-  padding: 0.5rem;
+  margin: 1.5rem auto 0.5rem;
+  padding: 0.5rem 3rem 1rem;
 }
 
 h1 {
@@ -94,6 +93,10 @@ footer {
   border-radius: 5px;
 }
 
+.submit-btn:hover {
+  cursor: pointer;
+}
+
 .location-date {
   display: flex;
   flex-direction: column;
@@ -154,18 +157,21 @@ footer {
 .weather-stats-list {
   background-color: #799851;
   border-radius: 50px;
-  padding: 1.25rem 2.5rem;
+  padding: 0.85rem 2rem;
   gap: 2rem;
   display: flex;
-  flex-direction: row;
+  overflow-x: scroll;
 }
 
-/* .weather-stats:first-child {
-  font-size: 0.85rem;
+.weather-stats-figure {
+  font-size: 0.88rem;
 }
 
-.weather-stats:nth-child(2) {
-} */
+.weather-stats-description {
+  color: #fff;
+  font-size: 0.6rem;
+  line-height: 1.65;
+}
 
 .forecast-list {
   display: flex;
