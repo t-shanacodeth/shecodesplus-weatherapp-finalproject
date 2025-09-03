@@ -18,9 +18,11 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-
     <!-- Stylesheet link -->
     <link rel="stylesheet" href="assets/main.css" />
+
+    <!-- Axios API Integration -->
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
   </head>
   <body>
     <div id="weather-app" class="weather-app">
@@ -49,10 +51,8 @@
       <main class="weather-section">
         <section class="location-date">
           <!-- Location -->
-          <h1 id="location">
-            <i class="material-icons location-pin">place</i>
-            London
-          </h1>
+          <i class="material-icons location-pin">place</i>
+          <h1 id="location">London</h1>
 
           <!-- Day, Date, Time -->
           <h2>
