@@ -11,27 +11,42 @@ function refreshWeather(response) {
 
   // Update temperature
   let apiTemperature = Math.round(responseData.temperature.current);
-  let currentTemperature = document.querySelector("#temperature");
-  currentTemperature.innerHTML = apiTemperature;
+  let currentTemperatureElement = document.querySelector("#temperature");
+  currentTemperatureElement.innerHTML = apiTemperature;
 
-  // Update cloudy cover
+  // Update weather condition
+
+  let apiWeatherCondition = responseData.condition.description;
+  let conditionSentence = apiWeatherCondition;
+  let conditionArray = conditionSentence.split(" ");
+
+  for (let i = 0; i < conditionArray.length; i++) {
+    conditionArray[i] =
+      conditionArray[i][0].toUpperCase() + conditionArray[i].substr(1);
+  }
+
+  let conditionSentenceUpdated = conditionArray.join(" ");
+  let weatherDescriptionElement = document.querySelector(
+    "#weather-condition-description"
+  );
+  weatherDescriptionElement.innerHTML = conditionSentenceUpdated;
 
   // Update weather icon
 
   // Update precipitation
   let apiFeelsLike = Math.round(responseData.temperature.feels_like);
-  let feelsLike = document.querySelector("#feels-like");
-  feelsLike.innerHTML = apiFeelsLike;
+  let feelsLikeElement = document.querySelector("#feels-like");
+  feelsLikeElement.innerHTML = apiFeelsLike;
 
   // Update humidity
   let apiHumidity = Math.round(responseData.temperature.humidity);
-  let humidity = document.querySelector("#humidity");
-  humidity.innerHTML = apiHumidity;
+  let humidityElement = document.querySelector("#humidity");
+  humidityElement.innerHTML = apiHumidity;
 
   // Update wind speed
   let apiWindSpeed = Math.round(responseData.wind.speed);
-  let windSpeed = document.querySelector("#wind-speed");
-  windSpeed.innerHTML = apiWindSpeed;
+  let windSpeedElement = document.querySelector("#wind-speed");
+  windSpeedElement.innerHTML = apiWindSpeed;
 }
 
 function searchCity(city) {

@@ -131,7 +131,7 @@ footer {
   font-size: 1.75rem;
 }
 
-.cloud-coverage {
+.weather-condition {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -140,11 +140,11 @@ footer {
   left: -48px;
 }
 
-.cloud-coverage p {
+.weather-condition p {
   font-weight: 300;
 }
 
-.cloud-coverage-icon {
+.weather-condition-icon {
   position: absolute;
   right: -108px;
   top: -65px;
