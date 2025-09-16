@@ -150,6 +150,7 @@ footer {
   top: -40px;
   width: 6rem;
   height: 6rem;
+  /* fix clear sky bug. Reposition the icon */
 }
 
 .additional-weather-stats {
