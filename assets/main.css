@@ -146,9 +146,10 @@ footer {
 
 .weather-condition-icon {
   position: absolute;
-  right: -108px;
-  top: -65px;
-  font-size: 6rem;
+  right: -90px;
+  top: -40px;
+  width: 6rem;
+  height: 6rem;
 }
 
 .additional-weather-stats {

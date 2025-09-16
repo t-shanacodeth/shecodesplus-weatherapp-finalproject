@@ -4,7 +4,6 @@ function refreshWeather(response) {
 
   // Update date and time
   let dateTime = new Date(responseData.time * 1000);
-  console.log(dateTime);
   let timeElement = document.querySelector("#time");
   timeElement.innerHTML = formatDate(dateTime);
 
@@ -34,6 +33,8 @@ function refreshWeather(response) {
   weatherDescriptionElement.innerHTML = conditionSentenceUpdated;
 
   // Update weather icon
+  let iconElement = document.querySelector("#icon");
+  iconElement.innerHTML = `<img src="${responseData.condition.icon_url}" class="weather-condition-icon"/>`;
 
   // Update precipitation
   let apiFeelsLike = Math.round(responseData.temperature.feels_like);
