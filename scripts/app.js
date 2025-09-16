@@ -3,9 +3,12 @@ function refreshWeather(response) {
   console.log(responseData);
 
   // Update date and time
+  let dateTime = new Date(responseData.time * 1000);
+  console.log(dateTime);
+  let timeElement = document.querySelector("#time");
+  timeElement.innerHTML = formatDate(dateTime);
 
   // Update city
-
   let locationElement = document.querySelector("#location");
   locationElement.innerHTML = responseData.city;
 
@@ -15,7 +18,6 @@ function refreshWeather(response) {
   currentTemperatureElement.innerHTML = apiTemperature;
 
   // Update weather condition
-
   let apiWeatherCondition = responseData.condition.description;
   let conditionSentence = apiWeatherCondition;
   let conditionArray = conditionSentence.split(" ");
@@ -47,6 +49,44 @@ function refreshWeather(response) {
   let apiWindSpeed = Math.round(responseData.wind.speed);
   let windSpeedElement = document.querySelector("#wind-speed");
   windSpeedElement.innerHTML = apiWindSpeed;
+}
+
+function formatDate(date) {
+  let minutes = date.getMinutes();
+
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  let hours = date.getHours();
+  let daysArr = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = daysArr[date.getDay()];
+  let dateNumber = date.getDate();
+  let monthsArr = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  let month = monthsArr[date.getMonth()];
+
+  return `${day}, ${dateNumber}th ${month} | ${hours}:${minutes}`;
 }
 
 function searchCity(city) {
