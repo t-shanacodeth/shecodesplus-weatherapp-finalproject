@@ -137,7 +137,8 @@ footer {
   align-items: center;
   position: relative;
   bottom: 12px;
-  left: -48px;
+  left: -35px;
+  top: 2px;
 }
 
 .weather-condition p {
@@ -150,7 +151,6 @@ footer {
   top: -40px;
   width: 6rem;
   height: 6rem;
-  /* fix clear sky bug. Reposition the icon */
 }
 
 .additional-weather-stats {
@@ -163,6 +163,7 @@ footer {
   padding: 0.85rem 2rem;
   gap: 2rem;
   display: flex;
+  margin-top: 1.25rem;
 }
 
 .weather-stats-figure {
