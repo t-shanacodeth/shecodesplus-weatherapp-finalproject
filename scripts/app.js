@@ -107,7 +107,30 @@ function handleSearchButtonSubmit(event) {
   searchCity(searchInput.value);
 }
 
+function displayForecast() {
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      ` <li class="forecast-day" >
+        <h5 class="weekday">${day}</h5>
+        <span class="forecast-weather-icon"> ☁️ </span>
+        <p class="high-temp">
+          <strong> 30º </strong>
+        </p>
+        <p class="low-temp">12º</p>
+      </li>
+    `;
+  });
+
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastHtml;
+}
+
 let weatherAppSearchForm = document.getElementById("weather-app-form");
 weatherAppSearchForm.addEventListener("submit", handleSearchButtonSubmit);
 
 searchCity("London");
+displayForecast();
