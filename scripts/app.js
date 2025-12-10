@@ -1,6 +1,5 @@
 function refreshWeather(response) {
   let responseData = response.data;
-  console.log(responseData);
 
   // Update date and time
   let dateTime = new Date(responseData.time * 1000);
@@ -95,16 +94,12 @@ function searchCity(city) {
 
   let apiKey = "68b934o4bafcaf00b4452c44bfc46ct3";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(refreshWeather);
-}
-
-function handleSearchButtonSubmit(event) {
-  event.preventDefault();
-
-  let searchInput = document.querySelector("#search-input");
-
-  // search for the city
-  searchCity(searchInput.value);
+  axios
+    .get(apiUrl)
+    .then(refreshWeather)
+    .catch((error) => {
+      console.error("Error fetching the forecast:", error);
+    });
 }
 
 function getForecast(city) {
@@ -112,10 +107,27 @@ function getForecast(city) {
 
   let forecastApiKey = "68b934o4bafcaf00b4452c44bfc46ct3";
   let forecastApiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${forecastApiKey}&units=metric`;
-  axios.get(forecastApiUrl).then(displayForecast);
+
+  axios
+    .get(forecastApiUrl)
+    .then(displayForecast)
+    .catch((error) => {
+      console.error("Error fetching the forecast:", error);
+    });
+}
+
+function handleSearchButtonSubmit(event) {
+  event.preventDefault();
+  let searchInput = document.querySelector("#search-input");
+
+  // search for the city
+  searchCity(searchInput.value);
+  getForecast(searchInput.value);
 }
 
 function formatForecastDay(timestamp) {
+  // convert timestamp for forecast day
+
   let weekday = new Date(timestamp * 1000);
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
@@ -123,8 +135,9 @@ function formatForecastDay(timestamp) {
 }
 
 function displayForecast(response) {
+  // display forecast data in HTML for each day
+
   let dailyForecastData = response.data.daily;
-  console.log(dailyForecastData);
 
   let forecastHtml = "";
 
